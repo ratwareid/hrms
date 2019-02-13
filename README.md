@@ -9,6 +9,7 @@ Date Commit : 13/2/2019 <br/>
 Notes : <br/>
   -First Commit <br/>
   -Please setup database on file database.php (application/config/database.php) <br/>
+  -Please open ratwareid.sql and use that for creating table<br/>
  
 Best Regards Ratwareid <br/>
  ///////////////////////////////////////////////////////////////<br/>
