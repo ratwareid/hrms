@@ -19,6 +19,7 @@ class Home extends CI_Controller {
 
                   $data = array(
                       'title' => 'Ratwareid.com',
+                      'menu' => 'dashboard',
                       'judul' => 'Halaman Home',
                       'content' => 'home/content',
                       'rows' => $rows

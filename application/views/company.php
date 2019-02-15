@@ -13,5 +13,6 @@ $this->load->view($content);
 //footer
 $this->load->view('resource/copyright');
 $this->load->view('resource/sidebar_setting');
-$this->load->view('home/footer_home');
+$this->load->view('resource/footer_admin');
+
 ?>

@@ -28,7 +28,7 @@ class Auth extends CI_Controller {
             $this->session->set_userdata($data);
 
 //            redirect ke halaman sukses
-            redirect(site_url('admin'));
+            redirect(site_url('home'));
         } else {
 //            tampilkan pesan error
             $error = 'username / password salah';
