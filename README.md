@@ -26,5 +26,6 @@ Notes : <br/>
   - Fixing Menu <br/>
   - Added Master Company <br/>
   - Please setup config.php (application/config/config.php) change $config['base_url'] = ''; into $config['base_url'] = 'http://localhost/hrms/'; or change hrms into your project folder name <br/>
-<br/>///////////////////////////////////////////////////////////////<br/>
+  
+ <br/>///////////////////////////////////////////////////////////////<br/>
  
