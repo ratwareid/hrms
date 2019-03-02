@@ -5,7 +5,7 @@
       <div class="panel-heading"><?php echo $heading ?></div>
       <div class="panel-body">
           <form action="<?php echo $action; ?>" method="post">
-          <input type="hideen" name="company_id" value="<?php echo $company_id; ?>" />
+          <input type="hidden" name="company_id" value="<?php echo $company_id; ?>" />
           <div class="form-group">
             <label for="LabelName">Company Name</label>
             <input type="text" class="form-control" name="company_name" id="company_name" placeholder="Company Name" value="<?php echo $company_name; ?>">

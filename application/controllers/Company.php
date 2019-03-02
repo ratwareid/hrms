@@ -67,6 +67,7 @@ class Company extends CI_Controller {
                 'error' => '',
                 'action' => base_url().'company/docreate',
                 'content' => 'company/form-input',
+                'company_id' => '',
                 'company_name' => '',
                 'company_address' => '',
                 'company_phone' => '',
