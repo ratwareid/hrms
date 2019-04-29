@@ -3,11 +3,16 @@ if ($this->session->userdata('logged')<>1) {
     redirect(site_url('auth'));
 }
 
-$this->load->view('resource/ratwareid/v1/navbar');
-$this->load->view('resource/ratwareid/v1/header');
+//header
+$this->load->view('resource/header_admin');
+$this->load->view('resource/sidepanel-header');
+$this->load->view('resource/sidepanel-menu');
 
-$this->load->view('resource/ratwareid/v1/sidebarL');
+//body
 $this->load->view($content);
-$this->load->view('resource/ratwareid/v1/sidebarR');
-$this->load->view('resource/ratwareid/v1/footer');
+
+//footer
+$this->load->view('resource/copyright');
+$this->load->view('resource/sidebar_setting');
+$this->load->view('resource/footer_admin');
 ?>

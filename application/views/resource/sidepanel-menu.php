@@ -44,7 +44,7 @@ include('checkactivemenu.php');
         </a>
         <ul class="treeview-menu">
           <li><a href="<?php echo base_url().'company'?>"><i class="fa fa-circle-o"></i>Company</a></li>
-          <li><a href="#"><i class="fa fa-circle-o"></i>User</a></li>
+          <li><a href="<?php echo base_url().'user'?>"><i class="fa fa-circle-o"></i>User</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Role</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Department</a></li>
           <li><a href="#"><i class="fa fa-circle-o"></i>Permit</a></li>
@@ -56,8 +56,8 @@ include('checkactivemenu.php');
           <span>Transaction</span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="company"><i class="fa fa-circle-o"></i>Absent IN/OUT</a></li>
-          <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i>Permit Request</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Absent IN/OUT</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Permit Request</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -66,14 +66,14 @@ include('checkactivemenu.php');
           <span>Reports</span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="company"><i class="fa fa-circle-o"></i>Absent History</a></li>
-          <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i>Permit & Approval History</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Absent History</a></li>
+          <li><a href="#"><i class="fa fa-circle-o"></i>Permit & Approval History</a></li>
         </ul>
       </li>
-      <li class="header">ADMIN SETUP</li>
+	   <li class="header">Help</li>
         <li class="#">
-        <a href="menuinitializer">
-          <i class="fa fa-dashboard"></i> <span>Menuinitializer</span>
+        <a href="#">
+          <i class="fa fa-address-card"></i> <span>About Us</span>
         </a>
       </li>
     </ul>

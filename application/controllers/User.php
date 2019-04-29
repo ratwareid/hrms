@@ -20,8 +20,9 @@ class User extends CI_Controller {
 
             $data = array(
                 'title' => 'Ratwareid.com',
+				'menu' => 'user',
                 'judul' => 'Halaman User',
-                'content' => 'user/index',
+                'content' => 'user/content',
                 'rows' => $rows
             );
 //		echo 'ini adalah controller user';
@@ -29,27 +30,31 @@ class User extends CI_Controller {
             $this->load->view('user',$data);
 	}
 
-        public function tambah() {
+        public function create() {
             $data = array(
                 'title' => 'Ratwareid.com',
-                'judul' => 'User / Tambah User',
-                'pesan' => 'Silahkan masukkan username dan password untuk user baru',
-                'action' => base_url().'user/aksitambah',
-                'content' => 'user/user_form',
+				'menu' => 'user',
+                'heading' => 'User / Add New User',
+                'action' => base_url().'user/docreate',
+                'content' => 'user/form-input',
+				'userid' => '',
                 'username' => '',
+				'fullname' => '',
+				'email' => '',
                 'password' => '',
-                'id' => '',
-                'tombol' => 'Tambah'
+				'error' => ''
             );
 
             $this->load->view('user',$data);
         }
 
-        public function aksitambah() {
+        public function docreate() {
 
 //            warning : aksi ini tanpa ada validasi form
             $data = array(
                 'username' => $this->input->post('username'),
+				'fullname' => $this->input->post('fullname'),
+				'email' => $this->input->post('email'),
                 'password' => md5($this->input->post('password'))
             );
 
@@ -59,51 +64,56 @@ class User extends CI_Controller {
             redirect(base_url().'user');
         }
 
-        public function ubah($id) {
+        public function edit($userid) {
 
             $this->load->model('user_model');
-            $row = $this->user_model->getById($id)->row();
+            $row = $this->user_model->getById($userid)->row();
 
             $data = array(
                 'title' => 'Ratwareid.com',
-                'judul' => 'User / Change Password',
-                'pesan' => 'Silahkan input password baru lalu klik tombol ubah',
-                'action' => base_url().'user/aksiubah',
-                'content' => 'user/user_form',
+                'menu' => 'company',
+                'heading' => 'Edit Company',
+				'error' => '',
+                'action' => base_url().'user/doedit',
+                'content' => 'user/form-input',
                 'username' => $row->username,
+				'fullname' => $row->fullname,
+				'email' => $row->email,
                 'password' => '',
-                'id' => $row->id,
-                'tombol' => 'Ubah'
+                'userid' => $row->userid,
             );
 
             $this->load->view('user',$data);
         }
 
-        public function aksiubah() {
+        public function doedit() {
 //            warning : aksi ini tanpa ada validasi form
             $updatepassword = array(
-                'username' => $this->input->post('username'),
+				'username' => $this->input->post('username'),
+                'fullname' => $this->input->post('fullname'),
+				'email' => $this->input->post('email'),
                 'password' => md5($this->input->post('password'))
-
-
             );
 
             $tidakupdatepassword = array(
+			'username' => $this->input->post('username'),
+                'fullname' => $this->input->post('fullname'),
+				'email' => $this->input->post('email'),
                 'username' => $this->input->post('username'),
             );
 
             $data = trim($this->input->post('password'))<>''?$updatepassword:$tidakupdatepassword;
 
             $this->load->model('user_model');
-            $this->user_model->ubah($this->input->post('id'),$data);
+            $this->user_model->ubah($this->input->post('userid'),$data);
 
             redirect(base_url().'user');
         }
 
-        public function delete($id) {
+        public function delete($userid) {
 
             $this->load->model('user_model');
-            $this->user_model->hapus($id);
+            $this->user_model->hapus($userid);
 
             redirect(base_url().'user');
         }

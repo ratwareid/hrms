@@ -14,5 +14,4 @@ $this->load->view($content);
 $this->load->view('resource/copyright');
 $this->load->view('resource/sidebar_setting');
 $this->load->view('resource/footer_admin');
-
 ?>

@@ -1,4 +1,10 @@
-<div class="col-lg-12">
+<style>
+   .border{
+	height: 700px;   
+   }
+</style>
+<div class="border">
+	<div class="col-lg-12">
 <div class="panel panel-default">
 <!-- Default panel contents -->
 <div class="panel-heading">Company List</div>
@@ -35,4 +41,6 @@
   </tbody>
 </table>
 </div><!-- /.col-lg-6 -->
+</div>
+
 </div>

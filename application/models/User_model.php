@@ -3,8 +3,8 @@
 class User_model extends CI_Model {
 
 //    nama tabel dan primary key
-    private $table = 'userdata';
-    private $pk = 'id';
+    private $table = 'm_user';
+    private $pk = 'userid';
 
 //    tampilkan semua data
     public function tampilkanSemua() {
@@ -13,8 +13,8 @@ class User_model extends CI_Model {
         return $q;
     }
 
-    public function getById($id) {
-        $q = $this->db->where($this->pk,$id);
+    public function getById($userid) {
+        $q = $this->db->where($this->pk,$userid);
         $q = $this->db->get($this->table);
         return $q;
     }
@@ -23,14 +23,14 @@ class User_model extends CI_Model {
         $this->db->insert($this->table, $data);
     }
 
-    public function ubah($id,$data) {
+    public function ubah($userid,$data) {
 
-        $this->db->where($this->pk, $id);
+        $this->db->where($this->pk, $userid);
         $this->db->update($this->table, $data);
     }
 
-    public function hapus($id) {
-        $this->db->where($this->pk, $id);
+    public function hapus($userid) {
+        $this->db->where($this->pk, $userid);
         $this->db->delete($this->table);
     }
 
