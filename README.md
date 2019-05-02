@@ -4,9 +4,10 @@ Supported and Thanks to : Codeigniter, Bootstrap , PHP , MYSQLI , AdminLTE <br/>
 
 How to Install :<br/>
  
-  - Please open hrms.sql and use that for creating table<br/>
+  - Please open <a href="https://github.com/ratwareid/hrms/blob/master/hrms.sql">hrms.sql</a> and use that for creating table<br/>
   - Please setup database on file database.php (application/config/database.php) <br/>
   - Please setup config.php (application/config/config.php) change $config['base_url'] = ''; into $config['base_url'] =     'http://localhost/hrms/'; or change hrms into your project folder name <br/>
+  - Do Login using username : admin , password : admin
   
 <br/>/////////////////////////////////////////////////////////////// <br/>
 
