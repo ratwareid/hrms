@@ -79,10 +79,9 @@ CREATE TABLE `m_user` (
 --
 -- Dumping data untuk tabel `m_user`
 --
-
+-- Username : admin tanpa password
 INSERT INTO `m_user` (`userid`, `username`, `fullname`, `email`, `password`, `f_active`, `f_delete`) VALUES
-(21, 'admin', 'Administrator', 'jerryerlangga82@gmail.com', 'edde84ada076b4917feda282040c08a8', NULL, NULL),
-(0, 'erlangga', 'Jerry Erlangga', 'jerryerlangga82@gmail.com', 'edde84ada076b4917feda282040c08a8', NULL, NULL);
+(21, 'admin', 'Administrator', 'jerryerlangga82@gmail.com', 'edde84ada076b4917feda282040c08a8', NULL, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
